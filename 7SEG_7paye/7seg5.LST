@@ -1,0 +1,92 @@
+MACRO ASSEMBLER 7SEG5                                      10/13/110 15:06:00 PAGE     1
+
+
+WIN16 MACRO ASSEMBLER A51 V6.03.08
+OBJECT MODULE PLACED IN D:\A\7SEG5.OBJ
+ASSEMBLER INVOKED BY: A51.EXE D:\A\7SEG5.A51 OJ(D:\A\7SEG5.OBJ) PIN(C:\FSI\INC) EP LINES XR DB PL(60) PW(80) RB(0) 
+
+LOC     OBJ           LINE    SOURCE
+  0000                   1     ORG 0000H
+0000    E590             2    LABLE1:   MOV A,P1
+0002    540F             3        ANL A,#00001111B
+0004    B40003           4        CJNE A,#0,N1
+0007    75B03F           5        MOV P3,#00111111B
+000A    B40103           6    N1:   CJNE A,#1,N2
+000D    75B006           7        MOV P3,#00000110B
+0010    B40203           8    N2:   CJNE A,#2,N3
+0013    75B05B           9        MOV P3,#01011011B
+0016    B40303          10    N3:   CJNE A,#3,N4
+0019    75B04F          11        MOV P3,#01001111B
+001C    B40403          12    N4:   CJNE A,#4,N5
+001F    75B066          13        MOV P3,#01100110B
+0022    B40503          14    N5:   CJNE A,#5,N6
+0025    75B06D          15        MOV P3,#01101101B
+0028    B40603          16    N6:   CJNE A,#6,N7
+002B    75B07D          17        MOV P3,#01111101B
+002E    B40703          18    N7:   CJNE A,#7,N8
+0031    75B007          19        MOV P3,#00000111B
+0034    B40803          20    N8:   CJNE A,#8,N9
+0037    75B07F          21        MOV P3,#01111111B
+003A    B40903          22    N9:   CJNE A,#9,N10
+003D    75B06F          23        MOV P3,#01101111B
+0040    B40A03          24    N10:  CJNE A,#10,N11
+0043    75B077          25        MOV P3,#01110111B
+0046    B40B03          26    N11:  CJNE A,#11,N12
+0049    75B07C          27        MOV P3,#01111100B
+004C    B40C03          28    N12:  CJNE A,#12,N13
+004F    75B039          29        MOV P3,#00111001B    
+0052    B40D03          30    N13:  CJNE A,#13,N14
+0055    75B05E          31        MOV P3,#01011110B
+0058    B40E03          32    N14:  CJNE A,#14,N15
+005B    75B079          33        MOV P3,#01111001B    
+005E    B40F03          34    N15:  CJNE A,#15,N16
+0061    75B071          35        MOV P3,#01110001B
+                        36    
+0064    809A            37    N16:  JMP LABLE1
+                        38    
+                        39    END    
+MACRO ASSEMBLER 7SEG5                                      10/13/110 15:06:00 PAGE     2
+
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES             REFERENCES
+
+N2 . . . . . . . .  C ADDR   0010H   A                          6 8# 
+N3 . . . . . . . .  C ADDR   0016H   A                          8 10# 
+P1 . . . . . . . .  D ADDR   0090H   A                          2 
+N4 . . . . . . . .  C ADDR   001CH   A                          10 12# 
+N5 . . . . . . . .  C ADDR   0022H   A                          12 14# 
+P3 . . . . . . . .  D ADDR   00B0H   A                          5 7 9 11 13 15 17 
+                                                                19 21 23 25 27 29 
+                                                                31 33 35 
+N6 . . . . . . . .  C ADDR   0028H   A                          14 16# 
+N7 . . . . . . . .  C ADDR   002EH   A                          16 18# 
+N8 . . . . . . . .  C ADDR   0034H   A                          18 20# 
+N9 . . . . . . . .  C ADDR   003AH   A                          20 22# 
+N10. . . . . . . .  C ADDR   0040H   A                          22 24# 
+N11. . . . . . . .  C ADDR   0046H   A                          24 26# 
+N12. . . . . . . .  C ADDR   004CH   A                          26 28# 
+LABLE1 . . . . . .  C ADDR   0000H   A                          2# 37 
+N13. . . . . . . .  C ADDR   0052H   A                          28 30# 
+N14. . . . . . . .  C ADDR   0058H   A                          30 32# 
+N15. . . . . . . .  C ADDR   005EH   A                          32 34# 
+N16. . . . . . . .  C ADDR   0064H   A                          34 37# 
+N1 . . . . . . . .  C ADDR   000AH   A                          4 6# 
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    102    ----
+   XDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+REGISTER BANK(S) USED : 0 
+
+ASSEMBLY COMPLETE.   0 WARNING(S)   0 ERROR(S)

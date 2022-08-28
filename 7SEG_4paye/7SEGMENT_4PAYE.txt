@@ -1,0 +1,32 @@
+ORG 0000H
+
+lable1:       MOV A,P1
+	ANL A,#00001111B
+
+	CJNE A,#0,N1
+	MOV P2,#0000B
+
+N1: 	CJNE A,#1,N2
+    	MOV P2,#0001B
+
+N2:	CJNE A,#2,N3
+    	MOV P2,#0010B
+
+N3: 	CJNE A,#3,N4
+    	MOV P2,#0011B
+
+N4: 	CJNE A,#4,N5
+    	MOV P2,#0100B
+
+N5: 	CJNE A,#5,N6
+    	MOV P2,#0101B
+
+N6: 	CJNE A,#6,N7
+    	MOV P2,#0110B
+
+N7: 	CJNE A,#7,N8
+    	MOV P2,#0111B
+
+N8: 	JMP lable1
+
+END

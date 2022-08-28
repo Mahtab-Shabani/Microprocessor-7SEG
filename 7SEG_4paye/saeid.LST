@@ -1,0 +1,65 @@
+MACRO ASSEMBLER SAEID                                      10/13/110 16:09:00 PAGE     1
+
+
+WIN16 MACRO ASSEMBLER A51 V6.03.08
+OBJECT MODULE PLACED IN D:\A\SAEID.OBJ
+ASSEMBLER INVOKED BY: A51.EXE D:\A\SAEID.A51 OJ(D:\A\SAEID.OBJ) PIN(C:\FSI\INC) EP LINES XR DB PL(60) PW(80) RB(0) 
+
+LOC     OBJ           LINE    SOURCE
+  0000                   1    	ORG 0000H
+0000    E590             2    LABLE1:   MOV A,P1
+0002    540F             3    	ANL A,#00001111B
+0004    B40003           4    	CJNE A,#0,N1
+0007    75A000           5    	MOV P2,#0000B
+000A    B40103           6    N1:   	CJNE A,#1,N2
+000D    75A001           7        	MOV P2,#0001B
+0010    B40203           8    N2:  	CJNE A,#2,N3
+0013    75A002           9        	MOV P2,#0010B
+0016    B40303          10    N3:   	CJNE A,#3,N4
+0019    75A003          11        	MOV P2,#0011B
+001C    B40403          12    N4:   	CJNE A,#4,N5
+001F    75A004          13        	MOV P2,#0100B
+0022    B40503          14    N5:   	CJNE A,#5,N6
+0025    75A005          15        	MOV P2,#0101B
+0028    B40603          16    N6:   	CJNE A,#6,N7
+002B    75A006          17        	MOV P2,#0110B
+002E    B40703          18    N7:   	CJNE A,#7,N8
+0031    75A007          19        	MOV P2,#0111B
+0034    80CA            20    N8:   	JMP LABLE1
+                        21    	END 
+MACRO ASSEMBLER SAEID                                      10/13/110 16:09:00 PAGE     2
+
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES             REFERENCES
+
+N2 . . . . . . . .  C ADDR   0010H   A                          6 8# 
+N3 . . . . . . . .  C ADDR   0016H   A                          8 10# 
+P1 . . . . . . . .  D ADDR   0090H   A                          2 
+N4 . . . . . . . .  C ADDR   001CH   A                          10 12# 
+P2 . . . . . . . .  D ADDR   00A0H   A                          5 7 9 11 13 15 17 
+                                                                19 
+N5 . . . . . . . .  C ADDR   0022H   A                          12 14# 
+N6 . . . . . . . .  C ADDR   0028H   A                          14 16# 
+N7 . . . . . . . .  C ADDR   002EH   A                          16 18# 
+N8 . . . . . . . .  C ADDR   0034H   A                          18 20# 
+LABLE1 . . . . . .  C ADDR   0000H   A                          2# 20 
+N1 . . . . . . . .  C ADDR   000AH   A                          4 6# 
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     54    ----
+   XDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+REGISTER BANK(S) USED : 0 
+
+ASSEMBLY COMPLETE.   0 WARNING(S)   0 ERROR(S)
